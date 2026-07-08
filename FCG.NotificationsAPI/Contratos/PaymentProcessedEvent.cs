@@ -1,4 +1,4 @@
-namespace FCG.NotificationsAPI.Contratos;
+namespace FCG.Contratos;
 
 public record PaymentProcessedEvent(
     Guid     OrderId,

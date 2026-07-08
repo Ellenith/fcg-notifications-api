@@ -4,7 +4,7 @@
 // Simula o envio de e-mail de confirmação ou rejeição de compra.
 // ============================================================
 
-using FCG.NotificationsAPI.Contratos;
+using FCG.Contratos;
 using MassTransit;
 
 namespace FCG.NotificationsAPI.Consumidores;
