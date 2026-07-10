@@ -31,7 +31,15 @@ builder.Services.AddMassTransit(x =>
             h.Password(builder.Configuration["RabbitMQ:Senha"]!);
         });
 
-        cfg.ConfigureEndpoints(context);
+        cfg.ReceiveEndpoint("notifications-user-created", e =>
+        {
+            e.ConfigureConsumer<UserCreatedConsumer>(context);
+        });
+
+        cfg.ReceiveEndpoint("notifications-payment-processed", e =>
+        {
+            e.ConfigureConsumer<PaymentProcessedConsumer>(context);
+        });
     });
 });
 

@@ -5,7 +5,7 @@
 // Em produção: integrar com SendGrid, MailKit, etc.
 // ============================================================
 
-using FCG.NotificationsAPI.Contratos;
+using FCG.Contratos;
 using MassTransit;
 
 namespace FCG.NotificationsAPI.Consumidores;
