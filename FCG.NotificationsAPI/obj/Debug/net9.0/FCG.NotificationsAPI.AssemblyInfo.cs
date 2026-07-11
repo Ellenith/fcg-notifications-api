@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FCG.NotificationsAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93c8c950e467bffa6c1ce4f4f8d65755454eca69")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6fb472ea4fc7d5be3214de937f32cfe1f6eb050a")]
 [assembly: System.Reflection.AssemblyProductAttribute("FCG.NotificationsAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FCG.NotificationsAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
