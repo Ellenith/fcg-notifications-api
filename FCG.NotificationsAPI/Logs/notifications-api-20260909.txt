@@ -1,0 +1,19 @@
+2026-09-09 00:00:28.959 -03:00 [INF] Application is shutting down...
+2026-09-09 00:00:29.009 -03:00 [INF] Bus stopped: "rabbitmq://localhost/"
+2026-09-09 23:53:25.359 -03:00 [INF] Configured endpoint notifications-user-created, Consumer: FCG.NotificationsAPI.Consumidores.UserCreatedConsumer
+2026-09-09 23:53:25.390 -03:00 [INF] Configured endpoint notifications-payment-processed, Consumer: FCG.NotificationsAPI.Consumidores.PaymentProcessedConsumer
+2026-09-09 23:53:25.533 -03:00 [INF] Now listening on: http://localhost:5017
+2026-09-09 23:53:25.534 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-09 23:53:25.535 -03:00 [INF] Hosting environment: Development
+2026-09-09 23:53:25.536 -03:00 [INF] Content root path: C:\Users\Ixtli\OneDrive\Documentos\Cursos\Pos-Graduacao FIAP\Arquitetura e Desenvolvimento .NET\Projeto - Etapa 3\FCG - Fase 03\fcg-notifications-api\FCG.NotificationsAPI
+2026-09-09 23:53:25.690 -03:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-09-09 23:53:45.389 -03:00 [INF] Start processing HTTP request POST https://fcg-notifications-function-lucaspereira.azurewebsites.net/api/user-created?*
+2026-09-09 23:53:45.391 -03:00 [INF] Sending HTTP request POST https://fcg-notifications-function-lucaspereira.azurewebsites.net/api/user-created?*
+2026-09-09 23:53:48.597 -03:00 [INF] Received HTTP response headers after 3202.8378ms - 200
+2026-09-09 23:53:48.607 -03:00 [INF] End processing HTTP request after 3220.3331ms - 200
+2026-09-09 23:53:48.609 -03:00 [INF] Evento UserCreated encaminhado pra Function: teste-nuvem@exemplo.com
+2026-09-09 23:56:00.137 -03:00 [INF] Start processing HTTP request POST https://fcg-notifications-function-lucaspereira.azurewebsites.net/api/user-created?*
+2026-09-09 23:56:00.139 -03:00 [INF] Sending HTTP request POST https://fcg-notifications-function-lucaspereira.azurewebsites.net/api/user-created?*
+2026-09-09 23:56:00.231 -03:00 [INF] Received HTTP response headers after 90.8895ms - 200
+2026-09-09 23:56:00.232 -03:00 [INF] End processing HTTP request after 94.9832ms - 200
+2026-09-09 23:56:00.234 -03:00 [INF] Evento UserCreated encaminhado pra Function: teste-nuvem2@exemplo.com

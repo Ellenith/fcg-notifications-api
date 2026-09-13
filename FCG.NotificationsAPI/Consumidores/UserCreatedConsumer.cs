@@ -1,10 +1,3 @@
-// ============================================================
-// UserCreatedConsumer.cs — Consome UserCreatedEvent
-//
-// Simula o envio de e-mail de boas-vindas logando no console.
-// Em produção: integrar com SendGrid, MailKit, etc.
-// ============================================================
-
 using FCG.Contratos;
 using MassTransit;
 
@@ -13,27 +6,26 @@ namespace FCG.NotificationsAPI.Consumidores;
 public class UserCreatedConsumer : IConsumer<UserCreatedEvent>
 {
     private readonly ILogger<UserCreatedConsumer> _logger;
+    private readonly IHttpClientFactory _httpClientFactory;
+    private readonly IConfiguration _configuration;
 
-    public UserCreatedConsumer(ILogger<UserCreatedConsumer> logger)
-        => _logger = logger;
+    public UserCreatedConsumer(ILogger<UserCreatedConsumer> logger, IHttpClientFactory httpClientFactory, IConfiguration configuration)
+    {
+        _logger = logger;
+        _httpClientFactory = httpClientFactory;
+        _configuration = configuration;
+    }
 
-    public Task Consume(ConsumeContext<UserCreatedEvent> context)
+    public async Task Consume(ConsumeContext<UserCreatedEvent> context)
     {
         var evento = context.Message;
+        var payload = new { email = evento.Email, nome = evento.Nome, role = evento.Role, criadoEm = evento.CriadoEm };
+        var url = _configuration["NotificationsFunction:UserCreatedUrl"];
 
-        // Simula envio de e-mail de boas-vindas
-        _logger.LogInformation(
-            "📧 [E-MAIL BOAS-VINDAS SIMULADO]" +
-            "\n  Para: {Email}" +
-            "\n  Assunto: Bem-vindo à FIAP Cloud Games, {Nome}!" +
-            "\n  Corpo: Olá {Nome}, sua conta foi criada com sucesso!" +
-            "\n         Role: {Role} | Criado em: {CriadoEm}",
-            evento.Email,
-            evento.Nome,
-            evento.Nome,
-            evento.Role,
-            evento.CriadoEm.ToLocalTime());
+        var client = _httpClientFactory.CreateClient();
+        var response = await client.PostAsJsonAsync(url, payload);
+        response.EnsureSuccessStatusCode();
 
-        return Task.CompletedTask;
+        _logger.LogInformation("Evento UserCreated encaminhado pra Function: {Email}", evento.Email);
     }
 }

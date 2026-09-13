@@ -1,0 +1,22 @@
+2026-09-08 19:09:15.220 -03:00 [INF] Configured endpoint notifications-user-created, Consumer: FCG.NotificationsAPI.Consumidores.UserCreatedConsumer
+2026-09-08 19:09:15.251 -03:00 [INF] Configured endpoint notifications-payment-processed, Consumer: FCG.NotificationsAPI.Consumidores.PaymentProcessedConsumer
+2026-09-08 19:09:15.376 -03:00 [INF] Now listening on: http://localhost:5017
+2026-09-08 19:09:15.378 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-08 19:09:15.379 -03:00 [INF] Hosting environment: Development
+2026-09-08 19:09:15.380 -03:00 [INF] Content root path: C:\Users\Ixtli\OneDrive\Documentos\Cursos\Pos-Graduacao FIAP\Arquitetura e Desenvolvimento .NET\Projeto - Etapa 3\FCG - Fase 03\fcg-notifications-api\FCG.NotificationsAPI
+2026-09-08 19:09:15.559 -03:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-09-08 19:09:31.299 -03:00 [INF] Start processing HTTP request POST http://localhost:7071/api/user-created
+2026-09-08 19:09:31.301 -03:00 [INF] Sending HTTP request POST http://localhost:7071/api/user-created
+2026-09-08 19:09:33.400 -03:00 [INF] Received HTTP response headers after 2095.9634ms - 200
+2026-09-08 19:09:33.409 -03:00 [INF] End processing HTTP request after 2112.4861ms - 200
+2026-09-08 19:09:33.411 -03:00 [INF] Evento UserCreated encaminhado pra Function: teste-notif-3@exemplo.com
+2026-09-08 19:22:01.068 -03:00 [INF] Start processing HTTP request POST http://localhost:7071/api/user-created
+2026-09-08 19:22:01.070 -03:00 [INF] Sending HTTP request POST http://localhost:7071/api/user-created
+2026-09-08 19:22:03.102 -03:00 [INF] Received HTTP response headers after 2030.9619ms - 200
+2026-09-08 19:22:03.104 -03:00 [INF] End processing HTTP request after 2035.4122ms - 200
+2026-09-08 19:22:03.105 -03:00 [INF] Evento UserCreated encaminhado pra Function: lucas.pereira@fiap.com.br
+2026-09-08 23:32:50.281 -03:00 [INF] Start processing HTTP request POST http://localhost:7071/api/payment-processed
+2026-09-08 23:32:50.299 -03:00 [INF] Sending HTTP request POST http://localhost:7071/api/payment-processed
+2026-09-08 23:32:52.367 -03:00 [INF] Received HTTP response headers after 2066.4884ms - 200
+2026-09-08 23:32:52.368 -03:00 [INF] End processing HTTP request after 2087.5777ms - 200
+2026-09-08 23:32:52.369 -03:00 [INF] Evento PaymentProcessed encaminhado pra Function: "180fb566-3a60-4129-8772-71e40708fd5f"
